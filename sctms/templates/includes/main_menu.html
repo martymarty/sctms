@@ -4,5 +4,6 @@
     <a {% if main_menu_selected == 'tour' %}class="selected"{% endif %} href="{{ domains.tms }}{% url tms:index %}"><span>Tournaments</span></a>
     <a {% if main_menu_selected == 'irc' %}class="selected"{% endif %} href="{{ domains.irc }}{% url irc %}"><span>Chat</span></a>
     <a {% if main_menu_selected == 'pages_faq' %}class="selected"{% endif %} href="{{ domains.cms }}{% url pages:page slug='faq' %}"><span>FAQ</span></a>
+    {%comment%}<a {% if main_menu_selected == 'gallery' %}class="selected"{% endif %} href="http://pics.thensl.cz"><span>Gallery</span></a>{%endcomment%}
 </nav>
 {% endspaceless %}
