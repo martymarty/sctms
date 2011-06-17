@@ -1,0 +1,20 @@
+{% extends 'cms/index.html' %}
+
+{% load i18n form_tags %}
+
+{% block title %} Komentář nelze vložit nepřihlášený {%endblock%}
+
+{% block content %}
+
+<div class="content-wrap" id="cms-entry-detail">
+
+    <div class="center-form clearfix">
+        <div class="box center-form">
+            <div class="box-content">
+                <div class="empty">Pro přidání komentáře je třeba se přihlásit.</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock%}

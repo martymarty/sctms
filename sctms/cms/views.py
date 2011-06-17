@@ -39,6 +39,8 @@ def detail(request, slug):
 @login_required
 def add_comment(request, slug):
     entry = get_object_or_404(BlogEntry, slug=slug)
+    if not user.is_authenticated:
+        return direct_to_template(request, 'cms/login_required.html')
     if request.method == 'POST':
         form = CommentForm(request.POST) # A form bound to the POST data
         if form.is_valid():
